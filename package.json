@@ -1,0 +1,21 @@
+{
+  "description": "Whirlwind example of test",
+  "repository": "n/a",
+  "license": "All rights reserved for deployer.",
+  "dependencies": {
+    "whirlwind": "xolvio/whirlwind#master"
+  },
+  "scripts": {
+    "load": "node runTest.js loadTest",
+    "stress": "node runTest.js stressTest",
+    "soak": "node runTest.js soakTest",
+    "spike": "node runTest.js spikeTest",
+    "load:local": "node runTest.js loadTestLocal",
+    "stress:local": "node runTest.js stressTestLocal",
+    "soak:local": "node runTest.js soakTestLocal",
+    "spike:local": "node runTest.js spikeTestLocal",
+    "deploy": "./scripts/deploy.sh"
+  },
+  "devDependencies": {
+  }
+}
