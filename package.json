@@ -16,6 +16,5 @@
     "spike:local": "node runTest.js spikeTestLocal",
     "deploy": "./scripts/deploy.sh"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }

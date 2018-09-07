@@ -16,7 +16,7 @@ const influx = new Influx.InfluxDB({ // here we create an InfluxDB client, it wo
     {
       measurement: 'RequestSent',
       fields: {
-        test: Influx.FieldType.STRING,
+        url: Influx.FieldType.STRING,
       },
       tags: []
     },
@@ -69,7 +69,7 @@ module.exports.generateNewUserEmailInFunction = (context, ee, next) => { // here
 module.exports.logRequestSentToInflux = (requestParams, context, ee, next) => { // here we log request send timestamp
   points.push({
     measurement: 'RequestSent',
-    fields: { test: 'A' },
+    fields: { url: requestParams.url },
     tags: {},
     timestamp: (new Date()).getTime()
   })
