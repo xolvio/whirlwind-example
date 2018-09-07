@@ -6,13 +6,13 @@ To use on AWS Lambda you need to deploy it first:
 
 1. clone repo
 
-2. npm install
+2. `npm install`
 
-3. npm run deploy
+3. `npm run deploy`
 
-4. Customise runTest.js to define your test scenario and load parameters.
+4. Customise `runTest.js` to define your test scenario and load parameters.
 
-And then you can run tests by eg. npm run soak
+And then you can run tests by eg. `npm run soak`
 
 We created 4 test types: stress, load, soak and spite.
 
