@@ -14,7 +14,7 @@ To use on AWS Lambda you need to deploy it first:
 
 And then you can run tests by eg. `npm run soak`
 
-We created 4 test types: stress, load, soak and spite.
+We created four test types: stress, load, soak and spite.
 
 # Stress test
 Stress test is a test which starts with some predefined startLoad load and increases the load during the test to a predefined endLoad.
