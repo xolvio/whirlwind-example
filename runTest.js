@@ -5,6 +5,7 @@ const exampleWorkingScenario = {
     {
       get: {
         url: 'https://google.pl',
+        // beforeRequest: 'logRequestSentToInflux'
       },
     }
   ],
@@ -43,7 +44,7 @@ const scenarios = [
   // exampleComplexScenario
 ]
 
-const loadTestParams = { testType: 'load', startLoad: 1, endLoad: 1, rampUpTime: 5 }
+const loadTestParams = { testType: 'load', startLoad: 1, endLoad: 3, rampUpTime: 5 }
 const stressTestParams = {
   testType: 'stress',
   startLoad: 1,
@@ -53,7 +54,7 @@ const stressTestParams = {
   numberOfSteps: 2,
   rampUpType: 'linear'
 }
-const soakTestParams = { testType: 'soak', load: 1, duration: 1 }
+const soakTestParams = { testType: 'soak', load: 1, duration: 10 }
 const spikeTestParams = {
   testType: 'spike',
   consistentLoad: 1,
