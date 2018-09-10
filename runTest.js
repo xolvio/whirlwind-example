@@ -5,7 +5,7 @@ const exampleWorkingScenario = {
     {
       get: {
         url: 'https://google.pl',
-        // beforeRequest: 'logRequestSentToInflux'
+        beforeRequest: process.env.INFLUX_HOST ? 'logRequestSentToInflux' : undefined
       },
     }
   ],
@@ -65,7 +65,9 @@ const spikeTestParams = {
 }
 let runFromLocalArtillery = false
 let processorFilename = false // you can define additional processor file with custom hooks
-// processorFilename = 'scenarioProcessor.js' // each time you change something inside processor you need to redeploy Lambda
+if (process.env.INFLUX_HOST) {
+  processorFilename = 'scenarioProcessor.js' // each time you change something inside processor you need to redeploy Lambda
+}
 
 const whirlwind = new Whirlwind()
 
